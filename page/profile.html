@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
     <title>山本涼太｜プロフィール</title>
 </head>
 <body>
@@ -13,18 +14,42 @@
         <ul class="nav-links">
             <li><a href="../index.html"><b>トップページ</b></a></li>
             <li><a href="../index.html#works"><b>作品内容</b></a></li>
-            <li><a href="../index.html#profile"><b>私について</b></a></li>
+            <li><a href="#"><b>私について</b></a></li>
         </ul>
     </header>
-    <main class="main">
-        <section>
+    <div id="mobile-warning" style="display:none;">
+        <p style="text-align:center; padding: 2rem; font-size: 1.2rem; background-color: #fffbe6; color: #cc0000;">
+            このサイトはPC専用です。スマートフォンやタブレットではご利用いただけません。
+        </p>
+    </div>
+    <div id="main-content">
+        <main class="main">
             <h1 class="fade-in-left">PROFILE</h1>
-            <img class="profile-img" src="../img/yamamoto_ryota_profile.JPG" alt="">
-            <p class="dream">夢を描き、現実を変える。「挑戦できる居場所を、誰にでも。」</p>
-        </section>
-    </main>
-    <footer>
-       <p><b>&copy;2025 YamamotoRyota / Jambo Profile</b></p>
-    </footer>
+            <h2 class="fade-in-left">夢を描き、現実を変える。</h2>
+            <section class="mvv-section">
+                <div class="mvv-image">
+                    <img class="profile-img" src="../img/yamamoto_ryota_profile.JPG" alt="プロフィール写真">
+                </div>
+                <div class="mvv-text">
+                    <h2>Mission</h2>
+                        <p>挑戦できる居場所を、誰にでも。</p>
+                    <h2>Vision</h2>
+                        <p>人と人がつながり、夢をかたちにできる社会へ。</p>
+                    <h2>Value</h2>
+                    <ul>
+                        <li>挑戦の肯定</li>
+                        <li>共感と尊重</li>
+                        <li>学び続ける姿勢</li>
+                        <li>人を巻き込む力</li>
+                        <li>現場と本質主義</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p><b>&copy;2025 YamamotoRyota / Jambo Profile</b></p>
+        </footer>
+    </div>
+    <script src="../js/main.js"></script>
 </body>
 </html>
