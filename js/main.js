@@ -1,9 +1,9 @@
 // PC専用サイトです
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if (isMobile) {
-    document.getElementById('mobile-warning').style.display = 'block';
-    document.getElementById('main-content').style.display = 'none';
-  }
+// const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+//   if (isMobile) {
+//     document.getElementById('mobile-warning').style.display = 'block';
+//     document.getElementById('main-content').style.display = 'none';
+//   }
 
 // 右クリックを無効化
   document.addEventListener('contextmenu', function(e) {

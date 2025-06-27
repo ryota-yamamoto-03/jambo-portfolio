@@ -59,10 +59,9 @@ body{
 
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
-  margin: 0;
-  padding: 20px;
+  margin-right: 40px;
 }
 
 .nav-links li{
@@ -149,6 +148,10 @@ ul.check-list li::before {
     padding-right: 30px;
 }
 
+.content-box-1 a{
+  color: #FE9101;
+}
+
 .content-box-2{
     background-color: #FFF8DC;
     border-radius: 20px;
@@ -168,6 +171,10 @@ ul.check-list li::before {
     padding-left: 30px;
 }
 
+.content-box-2 a{
+  color: #FE9101;
+}
+
 .profile{
     background-color: #FFFFFF;
     margin-top: 30px;
@@ -183,6 +190,8 @@ ul.check-list li::before {
 footer{
     background-color: #FED122;
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 ::selection {
@@ -213,12 +222,6 @@ footer{
   .nav-links.show {
     display: flex;
   }
-/*   
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    padding: 10px 20px;
-  } */
   .nav-links li {
     padding: 10px 0;
   }
@@ -253,7 +256,6 @@ footer{
     margin: 20px 20px; /* 左右マージンを小さくする */
     max-width: 500px;
   }
-
   .content-box-1 iframe,.content-box-2 iframe{
     width: auto;
     height: auto;
