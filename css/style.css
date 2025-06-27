@@ -16,12 +16,26 @@ body{
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* 上に重ねる */
+  z-index: 1000;
   background: #FE9101;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  padding: 0 20px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1100;
 }
 
 
@@ -31,6 +45,16 @@ body{
   font-weight: bold;
   text-decoration: none;
   color: #333;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -146,9 +170,10 @@ ul.check-list li::before {
 
 .profile{
     background-color: #FFFFFF;
+    margin-top: 30px;
 }
 
-.profile h2{
+.profile h1{
     font-size: 100px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -170,11 +195,30 @@ footer{
     align-items: flex-start;
     height: auto;
   }
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #FE9101;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+/*   
   .nav-links {
     flex-direction: column;
     width: 100%;
     padding: 10px 20px;
-  }
+  } */
   .nav-links li {
     padding: 10px 0;
   }
@@ -213,5 +257,62 @@ footer{
   .content-box-1 iframe,.content-box-2 iframe{
     width: auto;
     height: auto;
+  }
+}
+
+
+/* タブレット対応（幅1024px以下） */
+@media screen and (max-width: 1024px) {
+  .content-box-1 {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .content-box-2 {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .catch-copy {
+    font-size: 48px;
+  }
+
+  .profile-image {
+    width: 400px;
+  }
+}
+
+/* profile.html */
+.main{
+  background-color: #FFFFFF;
+}
+
+.profile-img{
+  margin-left: 100px;
+  width: 25%;
+  height: auto;
+}
+
+.dream{
+  
+}
+
+/* animation */
+/* 文字が左から右へ */
+.fade-in-left {
+  animation: fadeInLeftToRight 1s ease-out forwards;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  font-size: 100px;
+}
+
+@keyframes fadeInLeftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
