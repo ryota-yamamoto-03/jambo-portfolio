@@ -1,0 +1,217 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #FFD324;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* 上に重ねる */
+  background: #FE9101;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+
+.logo {
+  padding: 10px 55px;
+  padding-top: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+}
+
+.nav-links li{
+    padding: 5px 20px;
+}
+
+.nav-links li a , .nav-links img{
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.nav-links a:hover, .nav-links img:hover{
+    opacity: 0.8;
+}
+
+main {
+  padding-top: 60px; /* ヘッダーの高さ＋余裕分 */
+}
+
+section{
+    padding-top: 70px;
+}
+
+section .profile-image{
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    width: 650px;
+    height: auto;
+    margin-top: 20px;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.image-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.catch-copy {
+  font-weight: bold;
+  font-size: 80px;
+  display: inline-block;
+  padding-top: 120px;
+}
+
+ul.check-list {
+  list-style: none; /* 点を非表示に */
+  padding-left: 1.2em; /* チェックマーク分の余白 */
+}
+
+ul.check-list li::before {
+  content: '✔';
+  color: #000000;         /* チェックマークの色 */
+  margin-right: 0.5em;
+}
+
+.works h1{
+    font-size: 100px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+/* content box 1 or 2 */
+.content-box-1{
+    background-color: #FFF8DC;
+    border-radius: 20px;
+    margin-right: 800px;
+    margin-left: 100px;
+}
+
+.content-box-1 h2{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.content-box-1 iframe{
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-right: 30px;
+}
+
+.content-box-2{
+    background-color: #FFF8DC;
+    border-radius: 20px;
+    margin-left: 800px;
+    margin-right: 100px;
+}
+
+.content-box-2 h2{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.content-box-2 iframe{
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.profile{
+    background-color: #FFFFFF;
+}
+
+.profile h2{
+    font-size: 100px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+footer{
+    background-color: #FED122;
+    text-align: center;
+}
+
+::selection {
+  color: #FE9102;
+}
+
+@media screen and (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .nav-links li {
+    padding: 10px 0;
+  }
+  .logo {
+    padding: 10px 20px;
+  }
+  .profile-image {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .image-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .catch-copy {
+    font-size: 32px;
+    padding-top: 20px;
+  }
+  .works {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中央揃え */
+  }
+  .content-box-1,
+  .content-box-2 {
+    margin: 20px 20px; /* 左右マージンを小さくする */
+    max-width: 500px;
+  }
+
+  .content-box-1 iframe,.content-box-2 iframe{
+    width: auto;
+    height: auto;
+  }
+}
