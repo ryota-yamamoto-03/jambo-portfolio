@@ -1,10 +1,3 @@
-const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-
 // PC専用サイトです
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if (isMobile) {
@@ -29,4 +22,18 @@ document.addEventListener('mouseup', function () {
       // 新しいタブでツイート画面を開く
       window.open(tweetURL, '_blank');
     }
+  });
+
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // 一度だけアニメ発動
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in-zoom').forEach(el => {
+    observer.observe(el);
   });

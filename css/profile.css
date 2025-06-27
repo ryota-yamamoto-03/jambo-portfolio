@@ -6,12 +6,22 @@ body{
   font-size: 50px;
 }
 
-.mvv-section {
+.mvv-section-1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
   padding-bottom: 30px;
+}
+
+.mvv-section-2{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 30px;
+  flex-direction: row-reverse;
+  margin-right: 80px;
 }
 
 .mvv-image img {
@@ -25,6 +35,10 @@ body{
   max-width: 600px;
 }
 
+.episode h2, .episode p{
+  text-align: right;
+}
+
 .mvv-text h2 {
   font-size: 1.5rem;
   margin-top: 1rem;
@@ -35,6 +49,15 @@ body{
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 0.5rem;
+}
+
+.mvv-text a{
+  color: #FE9101;
+}
+
+footer{
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* レスポンシブ対応 */
