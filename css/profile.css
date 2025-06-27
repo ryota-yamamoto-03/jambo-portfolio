@@ -1,3 +1,7 @@
+body{
+  background-color: #FFFFFF;
+}
+
 .mvv-section {
   display: flex;
   flex-wrap: wrap;
