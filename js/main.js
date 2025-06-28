@@ -7,8 +7,9 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 // 右クリックを無効化
   document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
+  e.preventDefault(); // 通常の右クリックメニューを無効化
+  alert("【右クリック厳禁】コード汚いので見ないでください笑");
+});
 
 // ツイート機能
 document.addEventListener('mouseup', function () {

@@ -308,24 +308,20 @@ footer{
   }
   .content-box-1,
   .content-box-2 {
-    margin: 20px 20px; /* 左右マージンを小さくする */
+    margin: 5px 5px; /* 左右マージンを小さくする */
     max-width: 500px;
   }
   .content-box-1 iframe,.content-box-2 iframe{
-    width: auto;
-    height: auto;
+    width: 90%; 
+    height: auto; 
+    aspect-ratio: 16 / 9;
   }
 }
 
 
 /* タブレット対応（幅1024px以下） */
 @media screen and (max-width: 1024px) {
-  .content-box-1 {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
-  .content-box-2 {
+  .content-box-1,.content-box-2 {
     margin-left: 50px;
     margin-right: 50px;
   }
@@ -381,6 +377,18 @@ footer{
   }
 }
 
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .fade-in-zoom {
   animation: fadeInZoom 1s ease-out forwards;
 }
@@ -388,4 +396,8 @@ footer{
 .fade-in-zoom.visible {
   opacity: 1;
   transform: scale(1);
+}
+
+.floating {
+  animation: floatUpDown 3s ease-in-out infinite;
 }

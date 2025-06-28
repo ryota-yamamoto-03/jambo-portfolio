@@ -12,6 +12,7 @@ body{
   align-items: center;
   gap: 2rem;
   padding-bottom: 30px;
+  padding-top: 0px;
 }
 
 .mvv-section-2{
@@ -40,7 +41,7 @@ body{
 }
 
 .mvv-text h2 {
-  font-size: 1.5rem;
+  font-size: 30px;
   margin-top: 1rem;
   color: #FE9101;
 }
@@ -79,10 +80,24 @@ footer{
     padding: 2rem 1rem;
   }
 
+  .main h1{
+    font-size: 50px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .h2-text{
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
   .mvv-section-1, .mvv-section-2 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-top: 0px;
   }
 
   .mvv-image, .mvv-text {
@@ -100,11 +115,13 @@ footer{
   }
 
   .mvv-text h2 {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .mvv-text ul li{
     list-style: none;
+    font-size: 20px;
+    text-align: center;
   }
 
   .mvv-text p, .mvv-text li {
