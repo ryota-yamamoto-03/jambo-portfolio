@@ -84,7 +84,11 @@ main {
 }
 
 section{
-    padding-top: 70px;
+    padding-top: 100px;
+}
+
+section h1{
+  padding-top: 100px;
 }
 
 section .profile-image{
@@ -126,6 +130,42 @@ ul.check-list li::before {
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
+}
+
+/* ▼ 基本非表示 */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #FE9101;
+  padding: 0.5rem 0;
+  list-style: none;
+  margin: 0;
+  z-index: 1000;
+  min-width: 120px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ▼ リスト内のリンク */
+.dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #e87f00;
+  color: #FFFFFF;
+}
+
+/* ▼ ドロップダウン表示トリガー */
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 @keyframes slideInLeftToRight {
