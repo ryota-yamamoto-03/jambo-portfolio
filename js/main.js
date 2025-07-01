@@ -25,16 +25,33 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 //     }
 //   });
 
+// id位置に来たらアニメーションを発火
+document.addEventListener('DOMContentLoaded', function() {
+  const anchors = document.querySelectorAll('.animated-anchor');
+  const zoomIn = document.querySelectorAll('.zoom-in-animate');
+  if (!('IntersectionObserver' in window)) {
+    // 古いブラウザ用フォールバック
+    anchors.forEach(el => el.classList.add('visible'));
+    zoomIn.forEach(el => el.classList.add('visible'));
+    return;
+  }
 
-  const observer = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // 一度だけアニメ発動
+        observer.unobserve(entry.target); // 1度だけ
       }
     });
-  });
+  }, { threshold: 0.3 }); // 画面に3割見えたら発動
 
-  document.querySelectorAll('.fade-in-zoom').forEach(el => {
-    observer.observe(el);
-  });
+  anchors.forEach(el => observer.observe(el));
+  zoomIn.forEach(el => observer.observe(el));
+});
+
+// カーソルの色変更
+const cursor = document.getElementById('custom-cursor');
+document.addEventListener('mousemove', function(e) {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
