@@ -12,18 +12,18 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 });
 
 // ツイート機能
-document.addEventListener('mouseup', function () {
-    const selectedText = window.getSelection().toString().trim();
+// document.addEventListener('mouseup', function () {
+//     const selectedText = window.getSelection().toString().trim();
 
-    if (selectedText.length > 0) {
-      const siteURL = "https://ryota-yamamoto-03.github.io/jambo-portfolio/"; 
-      const tweetText = encodeURIComponent(`${selectedText}\n${siteURL}`);
-      const tweetURL = `https://twitter.com/intent/tweet?text=${tweetText}`;
+//     if (selectedText.length > 0) {
+//       const siteURL = "https://ryota-yamamoto-03.github.io/jambo-portfolio/"; 
+//       const tweetText = encodeURIComponent(`${selectedText}\n${siteURL}`);
+//       const tweetURL = `https://twitter.com/intent/tweet?text=${tweetText}`;
 
-      // 新しいタブでツイート画面を開く
-      window.open(tweetURL, '_blank');
-    }
-  });
+//       // 新しいタブでツイート画面を開く
+//       window.open(tweetURL, '_blank');
+//     }
+//   });
 
 
   const observer = new IntersectionObserver(entries => {
